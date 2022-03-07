@@ -18,15 +18,17 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    font-size: 2rem;
 }
 
 .output2 {
 
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-start;
+   
     justify-content: center;
-    font-size: 3rem;
+    align-items: center;
+    font-size: 2rem;
 }
 
 .box {
@@ -42,6 +44,13 @@
 
 }
 
+.corretta {
+    background-color: #03A696;
+}
+
+.sbagliato {
+    background-color: crimson;
+}
 .ani-0 {
     animation-duration: 1s;
 }

@@ -6,7 +6,7 @@ const numberOfWord = 5; // Qui imposta quanti numeri vuole giacare
 const arrNumbers = [];  
 const clientAnswers = [];
 
-let counter = 33;
+let counter = 3;
 let interval = 1000;
 let delay = -3;
 // Da lì parte un timer di 30 secondi
@@ -26,9 +26,7 @@ function timer() {
     }
 
     if (counter == 2) {
-        output.innerHTML = ' ';
         output2.innerHTML = "READY?"
-
     }
 
     if (counter == 1) {
@@ -41,6 +39,7 @@ function timer() {
         clearInterval(timeCounter);
         answerReceiver();
         answerCheck ();
+        
 
     }
     counter--;
@@ -49,17 +48,19 @@ function timer() {
 // il software dice quanti e quali dei numeri da indovinare sono stati individuati.
 
 function answerCheck () {
+    output.innerHTML = 'corretta:';
+    output2.innerHTML = 'sbagliato:';
     for (i = 0; i < numberOfWord; i++) {
         if (arrNumbers[i] == clientAnswers[i]) {
             let div = document.createElement("div");
-            div.classList.add("box");
-            div.innerHTML = `corretta: ${clientAnswers[i]}` ;
+            div.classList.add("box", "corretta");
+            div.innerHTML = clientAnswers[i];
             output.append(div);
             
         } else {
             let div = document.createElement("div");
-            div.classList.add("box");
-            div.innerHTML = `sbagliato: ${clientAnswers[i]}` ;
+            div.classList.add("box", "sbagliato");
+            div.innerHTML = clientAnswers[i] ;
             output2.append(div);
         }
        
