@@ -1,7 +1,7 @@
 
 const output = document.querySelector('.output');
 const output2 = document.querySelector('.output2');
-const numberOfWord = 5; // Qui imposta quanti numeri vuole giacare
+const numberOfWord = 10; // Qui imposta quanti numeri vuole giacare
 
 const arrNumbers = [];  
 const clientAnswers = [];
@@ -9,11 +9,12 @@ const clientAnswers = [];
 // Ho inserito delay perche ci sono elementi animati (numeri vengono uno ad uno).
 let delay = 2; // Qui imposta delay 
 
-let counter = 3 + delay; // Qui imposta timer, solo cambiare numero!
+let counter = 10 + delay; // Qui imposta timer, solo cambiare numero!
 let interval = 1000;
 
-
-
+// Random Number Range
+const minRandom = 1; // Qui imposta minima numero random volete.
+const maxRandom = 20; // Qui imposta massimo numero random volete.
 
 displayRandomNumbers(numberOfWord);
 const timeCounter = setInterval(timer, interval);
@@ -97,7 +98,7 @@ function displayRandomNumbers(i) {
     let aniCounter = 0;
     while( aniCounter < numberOfWord ) {
     
-        let randomNumber = randomNum(1, 50);
+        let randomNumber = randomNum(minRandom, maxRandom); 
         
         console.log(arrNumbers);
         
