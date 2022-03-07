@@ -5,3 +5,78 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.container {
+    width: 100vw;
+    margin: 0 auto;
+    
+}
+
+.output {
+    height: 50vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.output2 {
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: 3rem;
+}
+
+.box {
+    font-size: 2rem;
+    margin: 1rem 1rem;
+    border: 1px solid black;
+    padding: .4rem .8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation-name: slidein;
+    animation-timing-function: ease-in-out;
+
+}
+
+.ani-0 {
+    animation-duration: 1s;
+}
+
+.ani-1 {
+    animation-duration: 1.5s;
+}
+
+.ani-2 {
+    animation-duration: 2s;
+}
+
+.ani-3 {
+    animation-duration: 2.5s;
+}
+
+.ani-4 {
+    animation-duration: 3s;
+}
+
+
+
+@keyframes slidein {
+    from {
+
+      transform: translatey(-100px);
+      background-color: #03a69600;
+    
+    }
+  
+    to {
+      
+        transform: translatey(0);
+        background-color: #03A696;
+    
+
+    }
+  }
