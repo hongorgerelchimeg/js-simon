@@ -6,20 +6,23 @@ const numberOfWord = 5; // Qui imposta quanti numeri vuole giacare
 const arrNumbers = [];  
 const clientAnswers = [];
 
-let counter = 33;
+// Ho inserito delay perche ci sono elementi animati (numeri vengono uno ad uno).
+let delay = 2; // Qui imposta delay 
+
+let counter = 30 + delay; // Qui imposta timer, solo cambiare numero!
 let interval = 1000;
-let delay = -3;
-// Da lì parte un timer di 30 secondi
-// Imposta "counter" per timer
+
+
+
 
 displayRandomNumbers(numberOfWord);
 const timeCounter = setInterval(timer, interval);
 
 function timer() {
     
-    delay++;
+    delay--;
     console.log(delay);
-    if (delay > 0 ) {
+    if (delay < 0 ) {
         output2.innerHTML = counter;
         
 
@@ -94,7 +97,7 @@ function displayRandomNumbers(i) {
     let aniCounter = 0;
     while( aniCounter < numberOfWord ) {
     
-        let randomNumber = randomNum(1, 20);
+        let randomNumber = randomNum(1, 50);
         
         console.log(arrNumbers);
         
