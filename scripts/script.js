@@ -6,7 +6,7 @@ const numberOfWord = 5; // Qui imposta quanti numeri vuole giacare
 const arrNumbers = [];  
 const clientAnswers = [];
 
-let counter = 3;
+let counter = 33;
 let interval = 1000;
 let delay = -3;
 // Da lì parte un timer di 30 secondi
