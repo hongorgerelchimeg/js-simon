@@ -77,7 +77,8 @@
     from {
 
       transform: translatey(-100px);
-      background-color: #03a69600;
+      background-color: crimson;
+      filter: opacity(0);
     
     }
   
@@ -85,6 +86,7 @@
       
         transform: translatey(0);
         background-color: #03A696;
+        filter: opacity(1);
     
 
     }
