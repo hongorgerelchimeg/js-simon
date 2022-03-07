@@ -9,7 +9,7 @@ const clientAnswers = [];
 // Ho inserito delay perche ci sono elementi animati (numeri vengono uno ad uno).
 let delay = 2; // Qui imposta delay 
 
-let counter = 30 + delay; // Qui imposta timer, solo cambiare numero!
+let counter = 3 + delay; // Qui imposta timer, solo cambiare numero!
 let interval = 1000;
 
 
@@ -51,8 +51,8 @@ function timer() {
 // il software dice quanti e quali dei numeri da indovinare sono stati individuati.
 
 function answerCheck () {
-    output.innerHTML = 'corretta:';
-    output2.innerHTML = 'sbagliato:';
+    output.innerHTML = `la tua risposta: (${clientAnswers})  corretta:`;
+    output2.innerHTML = `la risposta corretta: (${arrNumbers})  sbagliato:`;
     for (i = 0; i < numberOfWord; i++) {
         if (arrNumbers[i] == clientAnswers[i]) {
             let div = document.createElement("div");
