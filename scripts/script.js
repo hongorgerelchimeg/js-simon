@@ -1,7 +1,7 @@
 
 const output = document.querySelector('.output');
 const output2 = document.querySelector('.output2');
-const numberOfWord = 10; // Qui imposta quanti numeri vuole giacare
+const numberOfWord = 5; // Qui imposta quanti numeri vuole giacare
 
 const arrNumbers = [];  
 const clientAnswers = [];
@@ -9,7 +9,7 @@ const clientAnswers = [];
 // Ho inserito delay perche ci sono elementi animati (numeri vengono uno ad uno).
 let delay = 2; // Qui imposta delay 
 
-let counter = 10 + delay; // Qui imposta timer, solo cambiare numero!
+let counter = 5 + delay; // Qui imposta timer, solo cambiare numero!
 let interval = 1000;
 
 // Random Number Range
